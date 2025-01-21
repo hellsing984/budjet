@@ -40,7 +40,7 @@ document.querySelector('.add-row').addEventListener('click', () => {
 
     tbody.appendChild(row);
 });
-
+/* bouton*/
 function deleteRow(button) {
     const row = button.parentElement;
     row.remove();
