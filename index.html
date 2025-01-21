@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice de Budget</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculateur de Budget</h1>
+    </header>
+    <main>
+        <button class="add-row">Ajouter une ligne</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Libellé</th>
+                    <th>Revenu (€)</th>
+                    <th>Dépense (€)</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" placeholder="Libellé"></td>
+                    <td><input type="text" class="income" placeholder="0.00" oninput="updateTotal()"></td>
+                    <td><input type="text" class="expense" placeholder="0.00" oninput="updateTotal()"></td>
+                    <td class="delete-row" onclick="deleteRow(this)">Supprimer</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="total">Total :</td>
+                    <td id="total-income">0.00</td>
+                    <td id="total-expense">0.00</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="balance">Solde : <span id="balance" class="positive">0.00</span> €</div>
+    </main>
+    <footer>
+        <p>Créé  par <a href="#">kevin</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
